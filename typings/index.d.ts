@@ -1143,6 +1143,11 @@ declare module "noblox.js" {
      * Gets `info` of `asset` and caches according to settings.
      */
     function getProductInfo(asset: number): Promise<ProductInfo>;
+    
+    /**
+     * Marks an `userAssetId` as resselable at set `price`.
+     */
+    function setAsResellable(assetId: number, userAssetId: number, price: number, jar?: CookieJar): Promise<boolean>
 
     /// Avatar
 
