@@ -1147,7 +1147,7 @@ declare module "noblox.js" {
     /**
      * Marks an `userAssetId` as resselable at set `price`.
      */
-    function setAsResellable(assetId: number, userAssetId: number, price: number, jar?: CookieJar): Promise<boolean>
+    function markAsResellable(assetId: number, userAssetId: number, price: number, jar?: CookieJar): Promise<boolean>
 
     /// Avatar
 
