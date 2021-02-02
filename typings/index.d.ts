@@ -1413,6 +1413,11 @@ declare module "noblox.js" {
      */
     function getWall(group: number, sortOrder?: SortOrder, limit?: Limit, cursor?: string, jar?: CookieJar): Promise<WallPostPage>;
 
+    /**
+     * Get the amount of funds a group has available.
+     */
+    function getGroupFunds(group: number, jar?: CookieJar): Promise<number>
+
     /// Party
 
     /// User
