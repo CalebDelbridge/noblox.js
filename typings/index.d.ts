@@ -1320,11 +1320,6 @@ declare module "noblox.js" {
     function leaveGroup(group: number, jar?: CookieJar): Promise<void>;
 
     /**
-     * Posts message `message` on the group wall with groupId `group`.
-     */
-    function post(group: number, message: string, jar?: CookieJar): Promise<void>;
-
-    /**
      * Alias of `changeRank(group, target, 1)`.
      */
     function promote(group: number, target: number, jar?: CookieJar): Promise<ChangeRankResult>;
@@ -1373,6 +1368,11 @@ declare module "noblox.js" {
      * Gets all (or up to limit when provided and greater than 0) players in `group` with the number/array of `roleset`.
      */
     function getPlayers(group: number, rolesetId: number[] | number, sortOrder?: SortOrder, limit?: number, jar?: CookieJar): Promise<GroupUser[]>;
+
+    /**
+     * Gets whether or not a user has premium.
+     */
+    function getPremium(userId: number, jar?: CookieJar): Promise<boolean>;
 
     /**
      * Gets `rank` of user with `userId` in `group` and caches according to settings.
