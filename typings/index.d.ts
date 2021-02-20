@@ -1143,6 +1143,11 @@ declare module "noblox.js" {
      * Gets `info` of `asset` and caches according to settings.
      */
     function getProductInfo(asset: number): Promise<ProductInfo>;
+    
+    /**
+     * Marks an `userAssetId` as resselable at set `price`.
+     */
+    function markAsResellable(assetId: number, userAssetId: number, price: number, jar?: CookieJar): Promise<boolean>
 
     /// Avatar
 
@@ -1407,6 +1412,11 @@ declare module "noblox.js" {
      * The `getStatus` function is returned as a property of the promise and returns the percent completion of the operation.
      */
     function getWall(group: number, sortOrder?: SortOrder, limit?: Limit, cursor?: string, jar?: CookieJar): Promise<WallPostPage>;
+
+    /**
+     * Get the amount of funds a group has available.
+     */
+    function getGroupFunds(group: number, jar?: CookieJar): Promise<number>
 
     /// Party
 
